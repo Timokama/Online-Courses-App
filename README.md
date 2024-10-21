@@ -2,9 +2,12 @@
 How To Add Authentication to Your RESTful API with Php
 Some familiarity with apache2. Apache2/ Ngnix installed on a local environment. Knowledge of Basic Linux Navigation and File Management. Here is a diagram to provide a sense of what the file structure of the project will look like once you have completed the task:
 ## step1: Installing dependencies
+
  > sudo ufw enable
 
- > sudo nano etc/apache2/sites-available/timo.conf
+ > sudo mkdir /var/www/html/Online-Courses-App
+
+ > sudo nano /etc/apache2/sites-available/timo.conf
 
     <VirtualHost *:80>
          # Add machine's IP address (use ifconfig command)
