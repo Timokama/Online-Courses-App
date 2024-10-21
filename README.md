@@ -7,12 +7,6 @@ Some familiarity with apache2. Apache2/ Ngnix installed on a local environment. 
 <VirtualHost *:80>
      # Add machine's IP address (use ifconfig command)
      ServerName 192.168.41.201
-     <Directory /home/timothy/timothy/>
-     		# set permissions as per apache2.conf file
-            Options FollowSymLinks
-            AllowOverride None
-            Require all granted
-     </Directory>
 
      <Directory /var/www/html/Online-Courses-App/api>
         AllowOverride All
@@ -23,7 +17,8 @@ Some familiarity with apache2. Apache2/ Ngnix installed on a local environment. 
      LogLevel warn
      CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
-
+ > php -v
+ > php -S localhost:8000 -t public
  > sudo systemctl start apache2
  > sudo systemctl status apache2
  > sudo tail -f /var/log/apache2/error.log
@@ -73,4 +68,22 @@ It contains the following requests
   api/Application.php //CRUD pplication
   api/Courses.php //CRUD Course
   api/Intake.php //CRUD Intake
+
+
+### 5. **Deploying Your Project**
+
+When you're ready to deploy your PHP project, you can host it on platforms like:
+
+- **Shared hosting** (often includes PHP by default).
+- **VPS or Cloud hosting** (like DigitalOcean, AWS, or Linode).
+- **PaaS** like Heroku (with PHP buildpacks) or AWS Elastic Beanstalk.
+
+### Summary
+
+- Install PHP, a web server, and optionally, a database.
+- Create a project structure and initialize Composer (if needed).
+- Write your first PHP script.
+- Configure your server to point to your project’s public directory.
+- Optionally, install third-party libraries using Composer.
+- Test your code and write a README for future developers.
 
