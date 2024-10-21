@@ -14,21 +14,21 @@ $action = $_GET['action'] ?? 'home';
 // Handle different actions based on the URL
 switch ($action) {
     case 'register':
-        include 'views/register.php'; // Load the registration page
+        include 'public/register.php'; // Load the registration page
         break;
     
     case 'login':
-        include 'views/login.php'; // Load the login page
+        include 'public/login.php'; // Load the login page
         break;
 
     case 'home':
     default:
-        include 'views/home.php'; // Load the home page
+        include 'public/index.html'; // Load the home page
         break;
 }
 
 // Example of a home view (views/home.php)
-if (!file_exists('views/home.php')) {
-    file_put_contents('views/index.php', '<h1>Welcome to the Online Courses</h1>');
+if (!file_exists('public/index.html')) {
+    file_put_contents('public/index.php', '<h1>Welcome to the Online Courses</h1>');
 }
 ?>
