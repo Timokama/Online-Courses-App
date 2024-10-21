@@ -2,8 +2,9 @@
 How To Add Authentication to Your RESTful API with Php
 Some familiarity with apache2. Apache2/ Ngnix installed on a local environment. Knowledge of Basic Linux Navigation and File Management. Here is a diagram to provide a sense of what the file structure of the project will look like once you have completed the task:
 ## step1: Installing dependencies
- > sudo nano etc/apache2/sites-available/timo.conf 
  > sudo ufw enable
+
+ > sudo nano etc/apache2/sites-available/timo.conf
 <VirtualHost *:80>
      # Add machine's IP address (use ifconfig command)
      ServerName 192.168.41.201
@@ -17,40 +18,46 @@ Some familiarity with apache2. Apache2/ Ngnix installed on a local environment. 
      LogLevel warn
      CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+
  > php -v
- > php -S localhost:8000 -t public
+
  > sudo systemctl start apache2
+
  > sudo systemctl status apache2
+
  > sudo tail -f /var/log/apache2/error.log
 
+ > php -S localhost:8000 -t public
 
-# Online-Courses-App
-├── api
-│   ├── Applicant.php
-│   ├── Application.php
-│   ├── Course.php
-│   └── Intake.php
-├── config
-│   └── database.php // provide the correct credentials
-├── controllers
-│   ├── ApplicantController.php
-│   ├── ApplicationsController.php
-│   └── LoginController.php
-├── database.sql
-├── public
-│   ├── application.php
-│   ├── courseId.php
-│   ├── dashboard.php
-│   ├── index.html
-│   ├── index.php
-│   ├── login.php
-│   ├── logout.php
-│   ├── register.php
-│   └── styles.css
-└── README.md
+
+    # Online-Courses-App
+    ├── api
+    │   ├── Applicant.php
+    │   ├── Application.php
+    │   ├── Course.php
+    │   └── Intake.php
+    ├── config
+    │   └── database.php // provide the correct credentials
+    ├── controllers
+    │   ├── ApplicantController.php
+    │   ├── ApplicationsController.php
+    │   └── LoginController.php
+    ├── database.sql
+    ├── public
+    │   ├── application.php
+    │   ├── courseId.php
+    │   ├── dashboard.php
+    │   ├── index.html
+    │   ├── index.php
+    │   ├── login.php
+    │   ├── logout.php
+    │   ├── register.php
+    │   └── styles.css
+    └── README.md
 
 
 ## step 2 Creating database user
+
  > mysql -u root -p < database.sql
 
 ## Step — 3 Execute the Project
@@ -70,7 +77,7 @@ It contains the following requests
   api/Intake.php //CRUD Intake
 
 
-### 5. **Deploying Your Project**
+##Step 5. **Deploying Your Project**
 
 When you're ready to deploy your PHP project, you can host it on platforms like:
 
