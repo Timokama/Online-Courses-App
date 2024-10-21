@@ -79,10 +79,10 @@ This api contains collection requests from localhost
 
 It contains the following requests
 
-  api/Applicant.php //CRUD Applicant
-  api/Application.php //CRUD pplication
-  api/Courses.php //CRUD Course
-  api/Intake.php //CRUD Intake
+    api/Applicant.php //CRUD Applicant
+    api/Application.php //CRUD pplication
+    api/Courses.php //CRUD Course
+    api/Intake.php //CRUD Intake
 
 
 ##Step 5. **Deploying Your Project**
