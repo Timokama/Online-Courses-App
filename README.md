@@ -61,6 +61,11 @@ Some familiarity with apache2. Apache2/ Ngnix installed on a local environment. 
  > mysql -u root -p < database.sql
 
 ## Step — 3 Execute the Project
+
+> sudo chmod -R 755 api/
+
+> sudo chown -R www-data:www-data api
+
 Now, in a web browser, you can navigate to the possible URLs and see the text returned 
 For Example: http://localhost/Online-Courses-App/public/register.php
 
