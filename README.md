@@ -5,19 +5,20 @@ Some familiarity with apache2. Apache2/ Ngnix installed on a local environment. 
  > sudo ufw enable
 
  > sudo nano etc/apache2/sites-available/timo.conf
-<VirtualHost *:80>
-     # Add machine's IP address (use ifconfig command)
-     ServerName 192.168.41.201
 
-     <Directory /var/www/html/Online-Courses-App/api>
-        AllowOverride All
-        Require all granted
-     </Directory>
-
-     ErrorLog ${APACHE_LOG_DIR}/error.log
-     LogLevel warn
-     CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
+    <VirtualHost *:80>
+         # Add machine's IP address (use ifconfig command)
+         ServerName 192.168.41.201
+    
+         <Directory /var/www/html/Online-Courses-App/api>
+            AllowOverride All
+            Require all granted
+         </Directory>
+    
+         ErrorLog ${APACHE_LOG_DIR}/error.log
+         LogLevel warn
+         CustomLog ${APACHE_LOG_DIR}/access.log combined
+    </VirtualHost>
 
  > php -v
 
