@@ -25,15 +25,6 @@ Some familiarity with apache2. Apache2/ Ngnix installed on a local environment. 
 
  > php -v
 
- > sudo systemctl start apache2
-
- > sudo systemctl status apache2
-
- > sudo tail -f /var/log/apache2/error.log
-
- > php -S localhost:8000 -t public
-
-
     # Online-Courses-App
     ├── api
     │   ├── Applicant.php
@@ -69,6 +60,14 @@ Some familiarity with apache2. Apache2/ Ngnix installed on a local environment. 
 > sudo chmod -R 755 api/
 
 > sudo chown -R www-data:www-data api
+
+> sudo systemctl start apache2
+
+> sudo systemctl status apache2
+
+> sudo tail -f /var/log/apache2/error.log
+
+> php -S localhost:8000 -t public
 
 Now, in a web browser, you can navigate to the possible URLs and see the text returned 
 For Example: http://localhost/Online-Courses-App/public/register.php
